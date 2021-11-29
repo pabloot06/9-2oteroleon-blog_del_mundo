@@ -1,0 +1,32 @@
+
+!-- inicia entrada: nombre_del_artículo -->
+<article>
+    <header>
+        <hgroup>
+            <!-- F1-F2-->
+            <h2> <img src="assets/images/icono_decorativo.png" alt="Descripción del ícono" height="35px" width="auto"> Título del artículo</h2>
+            <!-- Fecha en la que se escribió el artículo -->
+            <h4>28/nov /21</h4>
+        </hgroup>    
+    </header>
+    <!-- inicia contenido del artículo -->
+    <div>
+        
+        <h3>F1-F2-- </h3>
+        <p>Calendario</p>
+
+        <!-- inicia ilustración del artículo -->
+        <figure>
+            <img src="assets/images/ilustracion_1.jpg" alt="ilustracion 1º artículo" height="600px" width="auto">
+            <figcaption>Estamos listos para arrancar con motoren encendidos la temporada 2022!</figcaption>
+        </figure>
+        <!-- termina ilustración del artículo -->
+
+    </div>
+    <!-- Termina contenido del artículo -->
+    <footer>
+        Visita la pagina oficial de la F1 para enterarte de todas las noticias!:    https://www.formula1.com/
+    </footer>
+</article>
+<!-- fin entrada: nombre_del_artículo -->
+
