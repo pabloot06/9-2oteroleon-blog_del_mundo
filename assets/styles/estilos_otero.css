@@ -1,14 +1,28 @@
+/*clases generales*/
 body {
     background-color: black;
     color: white;
-}
-article {
-    background-color: rgb(red, green, blue) 44,43,43;
-    padding: 1.5rem;
-    border-bottom: 1px solid #ffffff;
+    margin: 0%;
 }
 
-#titulo_del_blog { text-align: center; font-size: 3rem;}
+article {
+    background-color: rgb(red, green, blue) 44, 43, 43;
+    padding: 1.5rem;
+    border-bottom: 1px solid #ffffff;
+
+}
+
+#titulo_del_blog {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 6rem;
+}
+
+/*terminan clases generales */
+
+/*barra de navegacion*/
+
+
 
 .resaltado {
     color: yellow;
@@ -18,6 +32,202 @@ nav>ul>li {
     list-style: none;
 }
 
-nav>ul>li {
+nav>ul>li>a {
     text-decoration: none;
+    color: #fff;
+
+
 }
+
+/*fin barra de navegacion*/
+
+/*footer del blog*/
+
+#footer_blog {
+
+    margin: 2rem;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 4rem 4rem 0rem 0rem;
+    font-size: 1.3rem;
+
+}
+
+
+/*fin footer del blog*/
+
+/*ilustraciones*/
+
+.ilustracion {
+    border: 4px white solid;
+    display: inline-block;
+
+
+}
+
+.ilustracion figcaption {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-style: italic;
+}
+
+/*fin ilustraciones*/
+
+/* grid */
+section {
+
+    /* despliégate como  grid */
+    display: grid;
+    /* Crea 12 columnas cada una de una fracción usando la función repeat*/
+    grid-template-columns: repeat(12, 1fr);
+    /* deja que las filas(renglones) ocupen el alto que necesitan */
+    grid-auto-rows: auto;
+    /* añade un espacio entre los elementos del grid de 3rem */
+    gap: 3rem;
+}
+
+/* Termina grid */
+
+/* apunta sólo a los header que son hijos directos de section */
+section>header {
+    /* esta sección se extenderá 12 columnas. */
+    grid-column: span 12;
+}
+
+section>main {
+
+    grid-column: span 8;
+}
+
+section>aside{
+    grid-column: span 4;
+}
+
+section>footer{
+    grid-column: span 12;
+}
+
+
+@media(min-width:1024.1px) {
+    section>main {
+        grid-column: span 8;
+    }
+}
+
+aside {
+    grid-column: span 12;
+}
+
+@media(min-width:1024.1px) {
+    section>aside {
+
+        grid-column: span 4;
+    }
+}
+
+section>footer {
+
+    grid-column: span 12;
+}
+
+nav {
+
+    font-size: 1.3rem;
+    position: fixed;
+    width: 100%;
+    background-color: #000;
+}
+
+nav>ul>li>a:hover {
+
+    text-decoration: underline;
+    color: greenyellow;
+
+
+}
+
+/*selecciona el <ul> que es hijo de <nav> */
+
+/* desde 0 hasta 1099px compórtate así: */
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    gap: 1rem;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 1.5rem;
+}
+
+/* pantallas grandes de 1100px en adelante compórtate así: */
+@media (min-width: 1100px) {
+    nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-bottom: 1px solid red;
+    }
+}
+
+/* fin pantallas grandes */
+
+
+hgroup>header>article {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+
+h2>hgroup>header>article {
+    display: flex;
+    text-align: center;
+}
+
+img>h2>hgroup>header>article {
+    margin-right: 1rem;
+}
+
+#footer_blog div:nth-child(2) {
+
+    font-size: 0.9rem;
+
+}
+
+/* Selecciona todas las imágenes que vivan dentro de un div que a su vez vive dentro de aside */
+aside div img {
+    /* la imagen tendrá color de fondo blanco */
+    background-color: #fff;
+    /* habrá un espacio entre el borde y el contenido de 0.5rem */
+    padding: 0.5rem;
+    /* redondea el borde para que sea un círculo */
+    border-radius: 50%;
+}
+
+aside>h2 {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+aside>div:nth-of-type(even) {
+    background-color: rgb(155, 18, 18);
+
+}
+
+aside>div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 0.6rem;
+    border-bottom: 1px dashed #fff;
+}
+
+/* si la pantalla mide mínimo 1024.1 px y máximo 1324.1 entonces... */
+@media (min-width: 1024.1px) and (max-width: 1324.1px) {
+    aside div {
+        /* despliega los elementos de microblogging uno encima del otr */
+        flex-direction: column;
+    }
+}
+
+/* end media */
